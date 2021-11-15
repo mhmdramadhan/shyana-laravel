@@ -19,8 +19,9 @@ class ProductGallery extends Model
         return $this->belongsTo(Product::class, 'product_id', 'id');
     }
 
+    // untuk mengarahkan gambar secara otomatis
     public function getPhotoAttribute($value)
     {
-        return url('storage/'. $value);
+        return url('storage/' . $value);
     }
 }
